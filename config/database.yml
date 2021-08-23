@@ -23,7 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: graphql_rails_api_development
+  database: testapp1
+  user: postgres
+  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: graphql_rails_api_production
-  username: graphql_rails_api
-  password: <%= ENV['GRAPHQL_RAILS_API_DATABASE_PASSWORD'] %>
+  database: api_production
+  username: deployer
+  password: password
